@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/drawable/buttonbackground.xml" value="0.167" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/drawable/cardbackground.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/drawable/malefemalefocus.xml" value="0.167" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/drawable/malefemalenotfocus.xml" value="0.167" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/drawable/plusminus.xml" value="0.167" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/layout/activity_bmi.xml" value="0.24270833333333333" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/layout/activity_splash.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/ASUS/BMICalculator/app/src/main/res/layout/activity_splash_screen.xml" value="0.25677083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

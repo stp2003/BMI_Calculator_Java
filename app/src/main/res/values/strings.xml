@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="TODO" />
+
+
+    <string name="unit">Cm</string>
+    <string name="femaleText">Female</string>
+    <string name="age">Age</string>
+    <string name="startingHeight">170</string>
+    <string name="startingWeight">55</string>
+    <string name="startingAge">22</string>
+    <string name="todo">TODO</string>
+    <string name="height">Height</string>
+    <string name="calculate_your_bmi">Calculate Your BMI</string>
+    <string name="weight">Weight</string>
+    <string name="male">Male</string>
+    <string name="recalculate_your_bmi">RECALCULATE YOUR BMI</string>
+    <string name="gender">Gender</string>
+    <string name="_22">22</string>
+    <string name="your_bmi_category_is">Your BMI Category Is</string>
+    <string name="bmi_calculator">BMI CALCULATOR</string>
+
+
+</resources>
