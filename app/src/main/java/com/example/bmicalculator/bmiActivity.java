@@ -19,23 +19,23 @@ import java.util.Objects;
 public class bmiActivity extends AppCompatActivity {
 
 
-    TextView mbmidisplay, magedisplay, mweightdisplay, mheightdisplay, mbmicategory, mgender;
-    Button mgotomain;
+    TextView mBMIDisplay, mAgeDisplay, mWeightDisplay, mHeightDisplay, mBMICategory, mGender;
+    Button mGotoMain;
     Intent intent;
 
-    ImageView mimageview;
-    String mbmi;
-    String cateogory;
-    float intbmi;
+    ImageView mImageView;
+    String mBMI;
+    String category;
+    float intBMI;
 
     String height;
     String weight;
 
-    float intheight, intweight;
+    float intHeight, intWeight;
 
-    RelativeLayout mbackground;
+    RelativeLayout mBackground;
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint({"ResourceAsColor", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,77 +50,77 @@ public class bmiActivity extends AppCompatActivity {
 
 
         intent = getIntent();
-        mbmidisplay = findViewById(R.id.bmiDisplay);
+        mBMIDisplay = findViewById(R.id.bmiDisplay);
 
-        mbmicategory = findViewById(R.id.bmiCategoryDisplay);
-        mgotomain = findViewById(R.id.gotoMain);
+        mBMICategory = findViewById(R.id.bmiCategoryDisplay);
+        mGotoMain = findViewById(R.id.gotoMain);
 
-        mimageview = findViewById(R.id.imageview);
+        mImageView = findViewById(R.id.imageview);
 
 
-        mgender = findViewById(R.id.genderDisplay);
-        mbackground = findViewById(R.id.contentLayout);
+        mGender = findViewById(R.id.genderDisplay);
+        mBackground = findViewById(R.id.contentLayout);
 
 
         height = intent.getStringExtra("height");
         weight = intent.getStringExtra("weight");
 
 
-        intheight = Float.parseFloat(height);
-        intweight = Float.parseFloat(weight);
+        intHeight = Float.parseFloat(height);
+        intWeight = Float.parseFloat(weight);
 
-        intheight = intheight / 100;
-        intbmi = intweight / (intheight * intheight);
-
-
-        mbmi = Float.toString(intbmi);
-        System.out.println(mbmi);
-
-        if (intbmi < 16) {
-            mbmicategory.setText("Severe Thinness");
-
-            mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.crosss);
+        intHeight = intHeight / 100;
+        intBMI = intWeight / (intHeight * intHeight);
 
 
-        } else if (intbmi < 16.9 && intbmi > 16) {
-            mbmicategory.setText("Moderate Thinness");
-            mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+        mBMI = Float.toString(intBMI);
+        System.out.println(mBMI);
+
+        if (intBMI < 16) {
+            mBMICategory.setText("Severe Thinness");
+
+            mBackground.setBackgroundColor(Color.RED);
+            mImageView.setImageResource(R.drawable.crosss);
 
 
-        } else if (intbmi < 18.4 && intbmi > 17) {
-            mbmicategory.setText("Mild Thinness");
-            mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+        } else if (intBMI < 16.9 && intBMI > 16) {
+            mBMICategory.setText("Moderate Thinness");
+            mBackground.setBackgroundColor(R.color.halfwarn);
+            mImageView.setImageResource(R.drawable.warning);
 
-        } else if (intbmi < 24.9 && intbmi > 18.5) {
-            mbmicategory.setText("Normal");
-            mimageview.setImageResource(R.drawable.ok);
 
-        } else if (intbmi < 29.9 && intbmi > 25) {
-            mbmicategory.setText("Overweight");
-            mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+        } else if (intBMI < 18.4 && intBMI > 17) {
+            mBMICategory.setText("Mild Thinness");
+            mBackground.setBackgroundColor(R.color.halfwarn);
+            mImageView.setImageResource(R.drawable.warning);
 
-        } else if (intbmi < 34.9 && intbmi > 30) {
-            mbmicategory.setText("Obese Class I");
-            mbackground.setBackgroundColor(R.color.halfwarn);
-            mimageview.setImageResource(R.drawable.warning);
+        } else if (intBMI < 24.9 && intBMI > 18.5) {
+            mBMICategory.setText("Normal");
+            mImageView.setImageResource(R.drawable.ok);
+
+        } else if (intBMI < 29.9 && intBMI > 25) {
+            mBMICategory.setText("Overweight");
+            mBackground.setBackgroundColor(R.color.halfwarn);
+            mImageView.setImageResource(R.drawable.warning);
+
+        } else if (intBMI < 34.9 && intBMI > 30) {
+            mBMICategory.setText("Obese Class I");
+            mBackground.setBackgroundColor(R.color.halfwarn);
+            mImageView.setImageResource(R.drawable.warning);
 
         } else {
-            mbmicategory.setText("Obese Class II");
-            mbackground.setBackgroundColor(R.color.warn);
-            mimageview.setImageResource(R.drawable.crosss);
+            mBMICategory.setText("Obese Class II");
+            mBackground.setBackgroundColor(R.color.warn);
+            mImageView.setImageResource(R.drawable.crosss);
 
         }
 
 
-        mgender.setText(intent.getStringExtra("gender"));
-        mbmidisplay.setText(mbmi);
+        mGender.setText(intent.getStringExtra("gender"));
+        mBMIDisplay.setText(mBMI);
 
 
-        mgotomain.setOnClickListener(new View.OnClickListener() {
+        mGotoMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
