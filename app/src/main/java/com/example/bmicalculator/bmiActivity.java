@@ -124,6 +124,7 @@ public class bmiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                finish();
                 startActivity(intent1);
             }
         });
